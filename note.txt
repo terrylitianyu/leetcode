@@ -1,0 +1,3 @@
+note.txt
+
+use python to do 10
