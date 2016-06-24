@@ -31,8 +31,9 @@ struct ListNode* reverseKGroup(struct ListNode* head, int k) {
   }
   if (i < k) return rtn;
   rtn = temp;
+  struct ListNode* new_head = temp->next;
   struct ListNode* tail = reverseKgroupHelp(head, k);
-  tail->next = reverseKGroup(temp->next, k);
+  tail->next = reverseKGroup(new_head, k);
   return rtn;
 
 }
